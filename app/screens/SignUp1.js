@@ -1,152 +1,180 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View,Image, Button, TouchableOpacity } from "react-native";
 
-function SignUp2({navigation}) {
+
+function SignUp1({navigation}) {
     return (
         <ScrollView
           contentContainerStyle={styles.scrollContentContainer}
         >
+
             <Image style={styles.logo} source={require("../assets/karaoke.png")} />
-            <Text>Select Your Favorite Genres{'\n'}</Text>
+            <Text>Select Your Favorite Artists{'\n'}</Text>
             <SafeAreaView style={styles.container}>
-              <View style={[styles.box, {
+             <View>
+                <TouchableOpacity style={[styles.box, {
                 transform: [{ translateX: -110 }]
             }]}>
-              <Image
+            <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Pop</Text>
+              <Text style={{textAlign:'center', position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Charlie Puth</Text>
+              </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+              <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -110 }]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Classical</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Ed Sheeran</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+            <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -220 },{translateX:110}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Hiphop</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Niall Horan</Text>
+          </TouchableOpacity>
           </View>
           </SafeAreaView>
           <SafeAreaView style={styles.container}>
-             <View style={[styles.box, {
+             <View>
+             <TouchableOpacity style={[styles.box, {
                 transform: [{ translateX: -110 },{translateY:-220}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Romantic</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Nick Jonas</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+              <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -330 }]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Bollywood</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>James Arthur</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+              <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -440 },{translateX:110}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Party</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Calum Scott</Text>
+          </TouchableOpacity>
           </View>
           </SafeAreaView>
             <SafeAreaView style={[styles.container, {
                 transform: [{ translateY: -440 }]
             }]}>
-             <View style={[styles.box, {
+             <View>
+                 <TouchableOpacity style={[styles.box, {
                 transform: [{ translateX: -110 }]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Trip</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Justin Bieber</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+          <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -110 }]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Workout</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Taylor Swift</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+           <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -220 },{translateX:110}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Feel Good</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Rihanna</Text>
+          </TouchableOpacity>
           </View>
           </SafeAreaView>
           <SafeAreaView style={[styles.container, {
                 transform: [{ translateY: -450 }]
             }]}>
-             <View style={[styles.box, {
+             <View>
+            <TouchableOpacity style={[styles.box, {
                 transform: [{ translateX: -110 },{translateY:-210}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Happy</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Beyonce</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+              <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -320 }]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Chill</Text>
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Ariana Grande</Text>
+          </TouchableOpacity>
           </View>
-          <View style={[styles.box, {
+          <View>
+              <TouchableOpacity style={[styles.box, {
                 transform: [{ translateY: -430 },{translateX:110}]
             }]}>
-                          <Image
+             <Image
               style={styles.image}
               source={require("../assets/karaoke.png")}
               resizeMode="contain" />
-              <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Hits</Text>
-
+              <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>One Direction</Text>
+          </TouchableOpacity>
           </View>   
           </SafeAreaView>
+          <TouchableOpacity style={styles.loginButton}>
+        <Button title="Next" color="#ff33cc" onPress={() => navigation.navigate("SignUp2")}/>
+      </TouchableOpacity>
+      
         </ScrollView>
     
     );
 }
 const styles = StyleSheet.create({
     container: {
-        
+        flex:1
     },
     image:{
-      width:100,
-      height:150,
-      opacity:0.3,
-    },
+        width:100,
+        height:150,
+        opacity:0.3,
+      },
     scrollContentContainer: {
-      flex:1,
       alignItems: "center",
-    //   paddingTop:35,
-    //   paddingBottom: 60
+      paddingTop:35,
+      paddingBottom: 60
     },
     box: {
       height: 100,
@@ -182,4 +210,4 @@ const styles = StyleSheet.create({
       },
   });
 
-export default SignUp2;
+export default SignUp1;

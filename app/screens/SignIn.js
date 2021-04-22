@@ -7,34 +7,14 @@ import {
   TextInput,
   TouchableOpacity,
   Button,
-  SafeAreaView
 } from "react-native";
 
-
-function SignUp({navigation}) {
-  const[fname,setFname] = useState("");
-  const[lname,setLname] = useState("");
+function SignIn({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require("../assets/karaoke.png")} />
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputFields}
-          placeholder="First Name"
-          placeholderTextColor="#003f5c"
-          onChangeText={(fname) => setFname(fname)}
-        />
-      </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputFields}
-          placeholder="Last Name"
-          placeholderTextColor="#003f5c"
-          onChangeText={(lname) => setLname(lname)}
-        />
-      </View>
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputFields}
@@ -51,21 +31,16 @@ function SignUp({navigation}) {
           onChangeText={(password) => setPassword(password)}
         />
       </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputFields}
-          placeholder="Confirm Password"
-          placeholderTextColor="#003f5c"
-          onChangeText={(password) => setPassword(password)}
-        />
-      </View>
-        <Text style={styles.alreadyMember}>Already a Member? </Text>
-      <TouchableOpacity style={styles.loginButton}>
-        <Button title="Login here" color="#ff33cc" onPress={() => navigation.navigate("SignIn")}/>
+      <TouchableOpacity>
+        <Text style={styles.forgotPassword}>Forgot Password?</Text>
       </TouchableOpacity>
-      
       <TouchableOpacity style={styles.loginButton}>
-        <Button title="Register" color="#ff33cc" onPress={() => navigation.navigate("SignUp1")}></Button>
+        <Button title="LOGIN" color="black" />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={styles.register}
+         onPress={() => navigation.navigate("SignUp")}>
+             New User? Register Here</Text>
       </TouchableOpacity>
     </View>
   );
@@ -86,7 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     width: "70%",
     height: 45,
-    marginBottom: 20, //adding distance between two fields
+    marginBottom: 30, //adding distance between two fields
     alignItems: "center",
   },
   inputFields: {
@@ -95,9 +70,9 @@ const styles = StyleSheet.create({
     padding: 10,
     alignContent: "center",
   },
-  alreadyMember: {
+  forgotPassword: {
     height: 30,
-    marginTop: 30,
+    marginBottom: 30,
   },
   loginButton: {
     width: "80%",
@@ -106,7 +81,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#ff33cc",
-    margin: "1%",
+    marginBottom: 30,
+  },
+  register: {
+    height: 50,
+    marginBottom: 50,
+    color: "blue",
   },
 });
-export default SignUp;
+export default SignIn;
