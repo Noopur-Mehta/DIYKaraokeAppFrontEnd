@@ -35,7 +35,7 @@ function SignIn({navigation}) {
         <Text style={styles.forgotPassword}>Forgot Password?</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.loginButton}>
-        <Button title="LOGIN" color="black" />
+        <Button title="LOGIN"  onPress={() => navigation.navigate("Options")} color="black" />
       </TouchableOpacity>
       <TouchableOpacity>
         <Text style={styles.register}

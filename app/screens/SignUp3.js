@@ -45,7 +45,7 @@ function SignUp3({navigation}) {
         />
       </View>
       <TouchableOpacity style={styles.regButton}>
-        <Button title="Register" color="#ff33cc" onPress={() => navigation.navigate("SearchSongs")}></Button>
+        <Button title="Register" color="#ff33cc" onPress={() => navigation.navigate("SignIn")}></Button>
       </TouchableOpacity>
        </SafeAreaView>
     );

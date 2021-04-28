@@ -14,6 +14,8 @@ import SignUp3 from "./app/screens/SignUp3";
 import { render } from "react-dom";
 import { StackRouter } from "react-navigation";
 import SearchSongs from "./app/screens/SearchSongs";
+import Options from "./app/screens/Options";
+import RecognizeSong from "./app/screens/RecognizeSong";
 
 const AppNavigator = createStackNavigator(); //
 
@@ -56,6 +58,16 @@ export default function App() {
         name="SearchSongs"
         component={SearchSongs}
         options={{title:"SearchSongs"}}
+        />
+        <AppNavigator.Screen
+        name="Options"
+        component={Options}
+        options={{title:"Options"}}
+        />
+        <AppNavigator.Screen
+        name="RecognizeSong"
+        component={RecognizeSong}
+        options={{title:"RecognizeSong"}}
         />
       </AppNavigator.Navigator>
     </NavigationContainer>
