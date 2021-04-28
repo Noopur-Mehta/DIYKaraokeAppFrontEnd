@@ -13,6 +13,7 @@ import SignUp2 from "./app/screens/SignUp2";
 import SignUp3 from "./app/screens/SignUp3";
 import { render } from "react-dom";
 import { StackRouter } from "react-navigation";
+import SearchSongs from "./app/screens/SearchSongs";
 
 const AppNavigator = createStackNavigator(); //
 
@@ -51,24 +52,13 @@ export default function App() {
           component={SignUp3}
           options={{ title: "SignUp" }}
         />
+        <AppNavigator.Screen
+        name="SearchSongs"
+        component={SearchSongs}
+        options={{title:"SearchSongs"}}
+        />
       </AppNavigator.Navigator>
     </NavigationContainer>
   );
 }
-// import { StatusBar } from "expo-status-bar";
-// import React from "react";
-// import { StyleSheet, Text, View } from "react-native";
-// import SignUp1 from "./app/screens/SignUp1";
-// import WelcomeScreen from "./app/screens/WelcomeScreen";
-// export default function App() {
-//   return <SignUp1 />;
-// }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-// });

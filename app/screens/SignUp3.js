@@ -4,7 +4,7 @@ import {
   from 'react-native-material-dropdown';
 import {StyleSheet, SafeAreaView, Image, View, TextInput, TouchableOpacity, Button} from "react-native";
 
-function SignUp3({Navigation}) {
+function SignUp3({navigation}) {
   const[sque1,setSque1] = useState("");
   const[sque2, setSque2] = useState("");
   const data1 = [{
@@ -45,7 +45,7 @@ function SignUp3({Navigation}) {
         />
       </View>
       <TouchableOpacity style={styles.regButton}>
-        <Button title="Register" color="#ff33cc" onPress={() => navigation.navigate("Welcome")}></Button>
+        <Button title="Register" color="#ff33cc" onPress={() => navigation.navigate("SearchSongs")}></Button>
       </TouchableOpacity>
        </SafeAreaView>
     );
