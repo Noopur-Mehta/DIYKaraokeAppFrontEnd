@@ -66,11 +66,9 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Party</Text>
           </View>
           </SafeAreaView>
-            <SafeAreaView style={[styles.container, {
-                transform: [{ translateY: -440 }]
-            }]}>
+          <SafeAreaView style={styles.container}>
              <View style={[styles.box, {
-                transform: [{ translateX: -110 }]
+                transform: [{ translateX: -110 },{translateY:-440}]
             }]}>
                           <Image
               style={styles.image}
@@ -79,7 +77,7 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Trip</Text>
           </View>
           <View style={[styles.box, {
-                transform: [{ translateY: -110 }]
+                transform: [{ translateY: -110 },{translateY:-440}]
             }]}>
                           <Image
               style={styles.image}
@@ -88,7 +86,7 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Workout</Text>
           </View>
           <View style={[styles.box, {
-                transform: [{ translateY: -220 },{translateX:110}]
+                transform: [{ translateY: -660 },{translateX:110}]
             }]}>
                           <Image
               style={styles.image}
@@ -97,11 +95,9 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Feel Good</Text>
           </View>
           </SafeAreaView>
-          <SafeAreaView style={[styles.container, {
-                transform: [{ translateY: -450 }]
-            }]}>
+          <SafeAreaView style={styles.container}>
              <View style={[styles.box, {
-                transform: [{ translateX: -110 },{translateY:-210}]
+                transform: [{ translateX: -110 },{translateY:-660}]
             }]}>
                           <Image
               style={styles.image}
@@ -110,7 +106,7 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Happy</Text>
           </View>
           <View style={[styles.box, {
-                transform: [{ translateY: -320 }]
+                transform: [{ translateY: -770 }]
             }]}>
                           <Image
               style={styles.image}
@@ -119,7 +115,7 @@ function SignUp2({navigation}) {
               <Text style={{position: 'absolute', fontSize: 20, fontWeight:'bold'}}>Chill</Text>
           </View>
           <View style={[styles.box, {
-                transform: [{ translateY: -430 },{translateX:110}]
+                transform: [{ translateY: -880 },{translateX:110}]
             }]}>
                           <Image
               style={styles.image}
@@ -129,13 +125,22 @@ function SignUp2({navigation}) {
 
           </View>   
           </SafeAreaView>
+          <SafeAreaView style={styles.container}>
+             <View>
+             <TouchableOpacity style={[styles.regButton, {
+                transform: [{ translateY: -880 }]
+            }]}>
+               <Button title="Next" color="#ff33cc" onPress={() => navigation.navigate("SignUp3")}></Button>
+            </TouchableOpacity>
+               </View>
+               </SafeAreaView>
         </ScrollView>
     
     );
 }
 const styles = StyleSheet.create({
     container: {
-        
+      // flex:1,
     },
     image:{
       width:100,
@@ -168,7 +173,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 120,
         marginTop: 20,
-        marginBottom: 40,
+        marginBottom: 10
       },
       loginButton: {
           paddingTop:0,

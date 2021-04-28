@@ -80,12 +80,10 @@ function SignUp1({navigation}) {
           </TouchableOpacity>
           </View>
           </SafeAreaView>
-            <SafeAreaView style={[styles.container, {
-                transform: [{ translateY: -440 }]
-            }]}>
+          <SafeAreaView style={styles.container}>
              <View>
                  <TouchableOpacity style={[styles.box, {
-                transform: [{ translateX: -110 }]
+                transform: [{ translateX: -110 },{translateY:-440}]
             }]}>
              <Image
               style={styles.image}
@@ -96,7 +94,7 @@ function SignUp1({navigation}) {
           </View>
           <View>
           <TouchableOpacity style={[styles.box, {
-                transform: [{ translateY: -110 }]
+                transform: [{ translateY: -110 },{translateY:-440}]
             }]}>
              <Image
               style={styles.image}
@@ -107,7 +105,7 @@ function SignUp1({navigation}) {
           </View>
           <View>
            <TouchableOpacity style={[styles.box, {
-                transform: [{ translateY: -220 },{translateX:110}]
+                transform: [{ translateY: -660 },{translateX:110}]
             }]}>
              <Image
               style={styles.image}
@@ -117,12 +115,10 @@ function SignUp1({navigation}) {
           </TouchableOpacity>
           </View>
           </SafeAreaView>
-          <SafeAreaView style={[styles.container, {
-                transform: [{ translateY: -450 }]
-            }]}>
+          <SafeAreaView style={styles.container}>
              <View>
             <TouchableOpacity style={[styles.box, {
-                transform: [{ translateX: -110 },{translateY:-210}]
+                transform: [{ translateX: -110 },{translateY:-660}]
             }]}>
              <Image
               style={styles.image}
@@ -133,7 +129,7 @@ function SignUp1({navigation}) {
           </View>
           <View>
               <TouchableOpacity style={[styles.box, {
-                transform: [{ translateY: -320 }]
+                transform: [{ translateY: -770 }]
             }]}>
              <Image
               style={styles.image}
@@ -144,7 +140,7 @@ function SignUp1({navigation}) {
           </View>
           <View>
               <TouchableOpacity style={[styles.box, {
-                transform: [{ translateY: -430 },{translateX:110}]
+                transform: [{ translateY: -880 },{translateX:110}]
             }]}>
              <Image
               style={styles.image}
@@ -152,19 +148,25 @@ function SignUp1({navigation}) {
               resizeMode="contain" />
               <Text style={{textAlign:'center',position: 'absolute', fontSize: 20, fontWeight:'bold'}}>One Direction</Text>
           </TouchableOpacity>
+        
           </View>   
           </SafeAreaView>
-          <TouchableOpacity style={styles.loginButton}>
-        <Button title="Next" color="#ff33cc" onPress={() => navigation.navigate("SignUp2")}/>
-      </TouchableOpacity>
-      
+          <SafeAreaView style={styles.container}>
+             <View>
+             <TouchableOpacity style={[styles.regButton, {
+                transform: [{ translateY: -880 }]
+            }]}>
+               <Button title="Next" color="#ff33cc" onPress={() => navigation.navigate("SignUp2")}></Button>
+            </TouchableOpacity>
+               </View>
+               </SafeAreaView>
         </ScrollView>
     
     );
 }
 const styles = StyleSheet.create({
     container: {
-        flex:1
+        // flex:1
     },
     image:{
         width:100,
@@ -172,9 +174,10 @@ const styles = StyleSheet.create({
         opacity:0.3,
       },
     scrollContentContainer: {
-      alignItems: "center",
-      paddingTop:35,
-      paddingBottom: 60
+      flex:1,
+      alignItems:"center"
+      // paddingTop:15,
+      // // paddingBottom: 60
     },
     box: {
       height: 100,
@@ -196,18 +199,20 @@ const styles = StyleSheet.create({
         width: 120,
         height: 120,
         marginTop: 20,
-        marginBottom: 40,
+        marginBottom: 10,
       },
-      loginButton: {
-          paddingTop:0,
-        width: "80%",
-        borderRadius: 25,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#ff33cc",
-        margin: "1%",
-      },
+      regButton:{
+        backgroundColor:"white"
+      }
+      // loginButton: {
+      //   width: "80%",
+      //   borderRadius: 25,
+      //   height: 50,
+      //   alignItems: "center",
+      //   justifyContent: "center",
+      //   backgroundColor: "#ff33cc",
+      //   margin: "1%",
+      // },
   });
 
 export default SignUp1;
