@@ -9,7 +9,7 @@ function SearchSongs({navigation}) {
       };
     
       updateSearch = (search) => {
-        this.setState({ search });
+        setState({ search });
       };
     const { search } = state;
 
